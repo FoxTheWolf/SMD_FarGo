@@ -6,49 +6,36 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #87ceeb;
 }
 
 main {
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-    width: 100%;
-    height: 150px;
-    border-radius: 10px 10px 0 0;
-}
-
-.card .info {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.card .info h2 {
-    margin-bottom: 10px;
-}
-
-.card .info p {
+h1 {
     margin-bottom: 20px;
 }
 
-.card .info button {
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
@@ -57,7 +44,7 @@ main {
     cursor: pointer;
 }
 
-.card .info button:hover {
+button:hover {
     background-color: #45a049;
 }
 
@@ -74,4 +61,5 @@ main {
 .deleteBtn:hover {
     background-color: #d32f2f;
 }
+
 

@@ -65,16 +65,18 @@ let pedidos = [];
  * Preenche a lista de insumos no HTML com botões para adicionar ao pedido
  */
 function preencherListaDeInsumos() {
-    document.getElementById('lista').innerHTML = getListaDeInsumos().map((item) => 
-        `<div class="item">
+    document.getElementById('lista').innerHTML = getListaDeInsumos().map((item) => {
+        document.getElementById('lista').style.display = 'grid';
+        document.getElementById('lista').style.gridTemplateColumns = 'repeat(auto-fill, minmax(200px, 1fr))';
+        return `<div class="item">
             <li class="nomeItem">${item.nome}</li>
             <img src="${item.imagem}">
             <p>estoque: ${item.estoque}</p>
             <p>${item.descricao}</p>
             <input type="number" class="quantidade" min="1" max="${item.estoque}" placeholder="Quantidade">
             <button class="addBtn">Adicionar ao Pedido</button>
-        </div>`
-    ).join('');
+        </div>`;
+    }).join('');
 }
 preencherListaDeInsumos();
 
@@ -154,7 +156,7 @@ document.getElementById('listaSelecionados').addEventListener('click', (event) =
 
 // Evento para confirmar o pedido
 botaoConfirmar.addEventListener('click', () => {
-    let pedido = new Pedido(pedidos.length + 1, arrayItensSelecionados, new Date().getFullYear());
+    let pedido = new Pedido(pedidos.length + 1, arrayItensSelecionados, new Date());
     pedidos.push(pedido);
 
     arrayItensSelecionados.forEach(item => {
@@ -172,7 +174,7 @@ botaoConfirmar.addEventListener('click', () => {
     alert('Pedido Realizado!');
     console.log(pedidos);
     let historicoDePedidos = document.getElementById('historico');
-    historicoDePedidos.innerHTML += `<p>Pedido ${pedido.id} - ${pedido.data.toLocaleString()} - Setor: ${setor.value} - Tipo: ${tipo.value} - ${pedido.array.map(i => i.nome + ' (' + i.quantidade + ')').join(', ')}</p>`;
+    historicoDePedidos.innerHTML += `<p>Pedido ${pedido.id} - ${pedido.data.toLocaleString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' })} - Setor: ${setor.value} - Tipo: ${tipo.value} - ${pedido.array.map(i => i.nome + ' (' + i.quantidade + ')').join(', ')}</p>`;
 });
 
 /**
@@ -208,6 +210,7 @@ function criarInsumo(nome, estoque) {
 function deletarInsumo(id) {
     insumos.splice(id - 1, 1);
 }
+
 
 
 
