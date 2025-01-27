@@ -34,10 +34,26 @@ class Pedido {
 
 // Lista de insumos disponíveis
 let insumos = [
-    { id: 1, nome: "luva", imagem: 'https://picsum.photos/200/300', estoque: 8 },
-    { id: 2, nome: "seringa", imagem: 'https://picsum.photos/400/300', estoque: 9 },
-    { id: 3, nome: "bandagens", imagem: 'https://picsum.photos/300/300', estoque: 10 }
-];
+    { id: 1, nome: "luva", imagem: 'https://picsum.photos/200/300', estoque: 100 },
+    { id: 2, nome: "seringa", imagem: 'https://picsum.photos/400/300', estoque: 150 },
+    { id: 3, nome: "bandagens", imagem: 'https://picsum.photos/300/300', estoque: 200 },
+    { id: 4, nome: "máscara", imagem: 'https://picsum.photos/200/300', estoque: 500 },
+    { id: 5, nome: "agulha", imagem: 'https://picsum.photos/200/300', estoque: 300 },
+    { id: 6, nome: "esparadrapo", imagem: 'https://picsum.photos/200/300', estoque: 250 },
+    { id: 7, nome: "compressa", imagem: 'https://picsum.photos/200/300', estoque: 300 },
+    { id: 8, nome: "álcool", imagem: 'https://picsum.photos/200/300', estoque: 400 },
+    { id: 9, nome: "termômetro", imagem: 'https://picsum.photos/200/300', estoque: 100 },
+    { id: 10, nome: "tesoura", imagem: 'https://picsum.photos/200/300', estoque: 50 },
+    { id: 11, nome: "estetoscópio", imagem: 'https://picsum.photos/200/300', estoque: 30 },
+    { id: 12, nome: "luva cirúrgica", imagem: 'https://picsum.photos/200/300', estoque: 400 },
+    { id: 13, nome: "soro fisiológico", imagem: 'https://picsum.photos/200/300', estoque: 350 },
+    { id: 14, nome: "gaze", imagem: 'https://picsum.photos/200/300', estoque: 300 },
+    { id: 15, nome: "esfigmomanômetro", imagem: 'https://picsum.photos/200/300', estoque: 20 },
+    { id: 16, nome: "bisturi", imagem: 'https://picsum.photos/200/300', estoque: 60 },
+    { id: 17, nome: "seringa descartável", imagem: 'https://picsum.photos/200/300', estoque: 500 },
+    { id: 18, nome: "gorro", imagem: 'https://picsum.photos/200/300', estoque: 300 },
+    { id: 19, nome: "avental", imagem: 'https://picsum.photos/200/300', estoque: 200 },
+    { id: 20, nome: "curativo", imagem: 'https://picsum.photos/200/300', estoque: 400 }
 
 // Lista de pedidos realizados
 let pedidos = [];
