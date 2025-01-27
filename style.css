@@ -6,7 +6,8 @@
 }
 
 body {
-    background-color: #87ceeb;
+    background: linear-gradient(to bottom, #ffbbbb, white, #ffbbbb) no-repeat;
+    background-size: 100% 100vh;
 }
 
 main {
