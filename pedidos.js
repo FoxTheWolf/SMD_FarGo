@@ -71,6 +71,7 @@ function preencherListaDeInsumos() {
             <img src="${item.imagem}">
             <p>estoque: ${item.estoque}</p>
             <p>${item.descricao}</p>
+            <input type="number" class="quantidade" min="1" max="${item.estoque}" placeholder="Quantidade">
             <button class="addBtn">Adicionar ao Pedido</button>
         </div>`
     ).join('');
@@ -112,25 +113,41 @@ let arrayItensSelecionados = [];
 document.getElementById('lista').addEventListener('click', (event) => {
     if (event.target && event.target.matches('button.addBtn')) {
         let item = event.target.parentElement.querySelector('li.nomeItem').textContent;
-        if (!arrayItensSelecionados.includes(item)) {
-            arrayItensSelecionados.push(item);
-            let lista = document.getElementById('lista');
-            lista.innerHTML += `<div class="itemSelecionado" style="display: flex; align-items: center;">
-                                    <li>${item}</li>
-                                    <button class="deleteBtn" style="margin-left: auto;">Delete</button>
-                                </div>`;
+        let quantidade = parseInt(event.target.parentElement.querySelector('input.quantidade').value, 10);
+        if (isNaN(quantidade)) {
+            quantidade = 1;
         }
+        let itemExistente = arrayItensSelecionados.find(i => i.nome === item);
+        if (itemExistente) {
+            itemExistente.quantidade += quantidade;
+        } else {
+            arrayItensSelecionados.push({ nome: item, quantidade });
+        }
+        atualizarListaSelecionados();
     }
 });
+
+function atualizarListaSelecionados() {
+    let lista = document.getElementById('lista');
+    let listaSelecionados = document.getElementById('listaSelecionados');
+    listaSelecionados.innerHTML = arrayItensSelecionados.map(item => 
+        `<div class="itemSelecionado" style="display: flex; align-items: center;">
+            <li>${item.nome} (Quantidade: ${item.quantidade})</li>
+            <button class="deleteBtn" style="margin-left: auto;">Delete</button>
+        </div>`
+    ).join('');
+    listaSelecionados.style.display = 'block';
+}
+
 
 /**
  * Evento para remover item selecionado
  */
-document.getElementById('lista').addEventListener('click', (event) => {
+document.getElementById('listaSelecionados').addEventListener('click', (event) => {
     if (event.target && event.target.matches('button.deleteBtn')) {
         let itemDiv = event.target.parentElement;
-        let itemName = itemDiv.querySelector('li').textContent;
-        arrayItensSelecionados = arrayItensSelecionados.filter(item => item !== itemName);
+        let itemName = itemDiv.querySelector('li').textContent.split(' (')[0];
+        arrayItensSelecionados = arrayItensSelecionados.filter(item => item.nome !== itemName);
         itemDiv.remove();
     }
 });
@@ -140,19 +157,22 @@ botaoConfirmar.addEventListener('click', () => {
     let pedido = new Pedido(pedidos.length + 1, arrayItensSelecionados, new Date().getFullYear());
     pedidos.push(pedido);
 
-    arrayItensSelecionados.forEach(itemNome => {
-        let insumo = insumos.find(insumo => insumo.nome === itemNome);
-        if (insumo && insumo.estoque > 0) {
-            insumo.estoque -= 1;
+    arrayItensSelecionados.forEach(item => {
+        let insumo = insumos.find(insumo => insumo.nome === item.nome);
+        if (insumo && insumo.estoque >= item.quantidade) {
+            insumo.estoque -= item.quantidade;
         }
     });
 
     arrayItensSelecionados = [];
+    let listaSelecionados = document.getElementById('listaSelecionados');
+    listaSelecionados.innerHTML = '';
+    listaSelecionados.style.display = 'none';
     preencherListaDeInsumos();
     alert('Pedido Realizado!');
     console.log(pedidos);
     let historicoDePedidos = document.getElementById('historico');
-    historicoDePedidos.innerHTML += `<p>Pedido ${pedido.id} - ${pedido.data.toLocaleString()} - Setor: ${setor.value} - Tipo: ${tipo.value} - ${pedido.array.join(', ')}</p>`;
+    historicoDePedidos.innerHTML += `<p>Pedido ${pedido.id} - ${pedido.data.toLocaleString()} - Setor: ${setor.value} - Tipo: ${tipo.value} - ${pedido.array.map(i => i.nome + ' (' + i.quantidade + ')').join(', ')}</p>`;
 });
 
 /**
@@ -188,4 +208,6 @@ function criarInsumo(nome, estoque) {
 function deletarInsumo(id) {
     insumos.splice(id - 1, 1);
 }
+
+
 
