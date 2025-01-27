@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto integrado 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FarGo</h1><br>
+    <h1>Novo Pedido</h1><br>
+    <div>
+        <label for="setor">Setor:</label><input type="text" id="setor" name="setor" placeholder="Setor"">
+        <label for="tipo">Tipo de Pedido:</label>
+        <select id="tipo" name="tipo">
+            <option value="individual">Individual</option>
+            <option value="coletivo">Coletivo</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="pesquisa">Item:</label>
+        <input type="text"
+        id="pesquisa" 
+        placeholder="Pesquisar">
+        <button id="botaopesquisar">Pesquisar</button>
+        <ul id="lista"></ul>
+    </div>
+    <br><br><br>
+    <button id="confirmar" type="button">confirmar pedido</button>
+
+    <section>
+        <h2>Histórico de Pedidos</h2>
+        <div id="historico"></div>
+    </section>
+
+    <script src="pedidos.js"></script>
+</body>
+</html>
+

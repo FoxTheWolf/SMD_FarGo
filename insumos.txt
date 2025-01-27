@@ -1,0 +1,10 @@
+1,tesoura,50,https://picsum.photos/200/300,Tesoura cirúrgica para cortes precisos em bandagens e materiais
+2,seringa,150,https://picsum.photos/400/300,Seringa descartável para aplicação de medicamentos
+3,bandagens,200,https://picsum.photos/300/300,Bandagens adesivas para curativos rápidos
+4,máscara,500,https://picsum.photos/200/300,Máscara facial para proteção contra agentes contaminantes
+5,agulha,300,https://picsum.photos/200/300,Agulha hipodérmica para uso em conjunto com seringas
+6,esparadrapo,250,https://picsum.photos/200/300,Fita adesiva para fixação de curativos e bandagens
+7,compressa,300,https://picsum.photos/200/300,Compressa de gaze esterilizada para feridas
+8,álcool,400,https://picsum.photos/200/300,Álcool 70% para desinfecção de superfícies e pele
+9,termômetro,100,https://picsum.photos/200/300,Termômetro digital para medição de temperatura corporal
+10,luva,100,https://picsum.photos/200/300,Luva de látex para proteção das mãos durante procedimentos

@@ -23,7 +23,7 @@ document.getElementById('login-form').addEventListener('submit',(event)=>{
 
     users.forEach(user =>{
         if(usuario === user.nome && senha === user.senha){
-            window.location = 'index.html';
+            window.location = 'menu.html';
             
         }
     
