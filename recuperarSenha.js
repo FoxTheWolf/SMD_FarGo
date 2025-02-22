@@ -24,7 +24,7 @@ document.getElementById('recuperar-form').addEventListener('submit',(event)=>{
         if(usuario === user.nome){
             if(novaSenha === confirmacaoSenha){
                 user.senha = novaSenha;
-                console.log(users);
+                window.location = 'login.html';
             }
             else {
                 mensagem.innerHTML = 'As senhas não se correspodem'
