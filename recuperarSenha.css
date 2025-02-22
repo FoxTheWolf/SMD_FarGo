@@ -18,6 +18,10 @@ form {
     gap: 10px;
 }
 
+label {
+    font-size: 30px;
+}
+
 input {
     background-color: #D1D1D1;
     padding: 15px;
