@@ -18,6 +18,13 @@ body {
     gap: 10px;
 }
 
+.input-box {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    right: 40px;
+}
+
 label {
     font-size: 30px;
 }
