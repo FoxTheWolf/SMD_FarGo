@@ -13,13 +13,12 @@ let users = [
     }
 ]
 
-console.log(users);
-
 document.getElementById('recuperar-form').addEventListener('submit',(event)=>{
     event.preventDefault();
     let usuario = document.getElementById('usuario').value.trim();
     let novaSenha = document.getElementById('novaSenha').value.trim();
     let confirmacaoSenha = document.getElementById('confirmacaoSenha').value.trim();
+    const mensagem = document.querySelector('#mensagem');
 
     users.forEach(user => {
         if(usuario === user.nome){
@@ -28,7 +27,8 @@ document.getElementById('recuperar-form').addEventListener('submit',(event)=>{
                 console.log(users);
             }
             else {
-                console.log('As senhas não se correspodem');
+                mensagem.innerHTML = 'As senhas não se correspodem'
+                mensagem.style.color = 'red';
             }
         }
     })
