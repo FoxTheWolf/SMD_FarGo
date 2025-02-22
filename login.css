@@ -21,6 +21,7 @@ body {
 .input-box {
     display: flex;
     gap: 20px;
+    align-items: center;
     position: relative;
     right: 40px;
 }
