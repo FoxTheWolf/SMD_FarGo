@@ -6,5 +6,13 @@
 
 body {
     background: linear-gradient(to bottom, #E3B8B8,#F6E4E4,#E3B8B8) ;
+    background-repeat: no-repeat;
     height: 100vh;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
