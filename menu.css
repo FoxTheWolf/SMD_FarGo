@@ -18,6 +18,12 @@ nav {
     justify-content: space-between;
 }
 
+div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 img {
     height: 200px;
     
