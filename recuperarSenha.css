@@ -22,10 +22,14 @@ form {
     display: flex;
     gap: 20px;
     align-items: center;
+    position: relative;
+    right: 125px;
 }
 
 label {
     font-size: 30px;
+    width: 250px;
+    text-align: right;
 }
 
 input {
