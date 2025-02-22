@@ -9,3 +9,9 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
 }
+
+nav {
+    background-color: #FFF;
+    height: 100px;
+}
+
