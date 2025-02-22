@@ -18,6 +18,10 @@ body {
     gap: 10px;
 }
 
+label {
+    font-size: 30px;
+}
+
 input {
     background-color: #D1D1D1;
     padding: 15px;
@@ -26,6 +30,7 @@ input {
 }
 
 button {
+    font-size: 30px;
     background-color: #D1D1D1;
     padding: 20px;
     width: 200px;
