@@ -120,3 +120,15 @@ select {
 #listaSelecionados li{
     padding: 10px;
 }
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+ #confirmar {
+    font-weight: bold;
+    background-color: #FFD98F;
+    padding: 10px;
+    border-radius: 5px;
+}
