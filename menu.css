@@ -56,7 +56,13 @@ h1 {
 .input-group {
     display: flex;
     background-color: #FFF;
-    width: 200px;
+    width: 210px;
     padding: 10px;
     border-radius: 20px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    padding-left: 10px;
 }
