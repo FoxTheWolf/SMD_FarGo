@@ -54,6 +54,14 @@ h1 {
     font-weight: bold;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px;
+}
+
 .input-group {
     display: flex;
     background-color: #FFF;
