@@ -64,12 +64,12 @@ h1 {
     justify-content: space-between;
 }
 
-.input-container label {
+label {
     font-size: 30px;
     font-weight: bold;
 }
 
-.input-container input[type = "text"]{
+ input[type = "text"]{
     width: 500px; 
     padding: 5px;
     border-radius: 5px;
@@ -83,4 +83,9 @@ select {
 
 #pesquisa {
     width: 250px;
+}
+
+.search-group{
+    padding: 0 50px 0 50px;
+    margin-top: 50px
 }
