@@ -109,6 +109,9 @@ select {
     text-align: center;
 }
 
+.item img {
+    min-width: 200px;
+}
 
 #listaSelecionados {
     list-style: none;
