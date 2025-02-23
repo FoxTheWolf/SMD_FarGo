@@ -53,3 +53,10 @@ h1 {
     font-weight: bold;
 }
 
+.input-group {
+    display: flex;
+    background-color: #FFF;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+}
