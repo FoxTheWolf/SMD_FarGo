@@ -8,7 +8,7 @@
 }
 
 body {
-    background: linear-gradient(to bottom, #E3B8B8,#F6E4E4,#E3B8B8) ;
+    background: #E8FFDD ;
     background-repeat: no-repeat;
     min-height: 100vh;
 }
@@ -34,7 +34,7 @@ label {
 }
 
 input {
-    background-color: #D1D1D1;
+    background-color: #A4EAC6;
     padding: 15px;
     border-radius: 20px;
     border: 3px solid;
@@ -42,7 +42,7 @@ input {
 
 button {
     font-size: 30px;
-    background-color: #D1D1D1;
+    background-color: #FFD98F;
     padding: 20px;
     margin-top: 50px;
     width: 200px;
