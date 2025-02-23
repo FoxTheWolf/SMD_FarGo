@@ -70,3 +70,15 @@ h1 {
     padding-left: 10px;
     width: 700px;
 }
+
+table {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+table th, table td {
+    padding: 15px;
+    border-bottom: 1px solid;
+}
+
