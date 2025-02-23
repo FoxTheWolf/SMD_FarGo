@@ -54,3 +54,19 @@ h1 {
     gap: 10px;
     margin: 40px;
 }
+
+.input-group {
+    display: flex;
+    background-color: #FFF;
+    width: 310px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.input-group input {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    width: 700px;
+}
