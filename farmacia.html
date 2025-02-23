@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="imagens/logo.png" alt="Logo da FarGo">
+                <p>Histórico de pedidos</p>
+            </div>
+            
+            <div>
+                <i class="fa-regular fa-user"></i>
+                <p>Farmacêutico: XXXXXXXX</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Novos Pedidos</h1>
+        <div class="container">
+            <div class="input-group">
+                <input type="text" placeholder="pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Data de Abertura</th>
+                    <th>Status</th>
+                    <th>ID</th>
+                    <th>Setor</th>
+                    <th>Descrição</th>
+                    <th>Observação</th>
+                    <th>Feedback Enfermagem</th>
+                </tr>
+                <tr>
+                    <td>DD/MM/AAAA HH:MM</td>
+                    <td>1.Solucionado 2.Aguardando solução 3.Cancelado</td>
+                    <td>XXXXX</td>
+                    <td>CM1</td>
+                    <td>------------</td>
+                    <td>------------</td>
+                    <td><input type="checkbox" id="check_1"><label for="check_1">Entregue</label></td>
+                </tr>
+                <tr>
+                    <td>DD/MM/AAAA HH:MM</td>
+                    <td>1.Solucionado 2.Aguardando solução 3.Cancelado</td>
+                    <td>XXXXX</td>
+                    <td>CM2</td>
+                    <td>------------</td>
+                    <td>------------</td>
+                    <td><input type="checkbox" id="check_2"><label for="check_2">Entregue</label></td>
+                </tr>
+                <tr>
+                    <td>DD/MM/AAAA HH:MM</td>
+                    <td>1.Solucionado 2.Aguardando solução 3.Cancelado</td>
+                    <td>XXXXX</td>
+                    <td>CM3</td>
+                    <td>------------</td>
+                    <td>------------</td>
+                    <td><input type="checkbox" id="check_3"><label for="check_3">Entregue</label></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
