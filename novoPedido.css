@@ -67,7 +67,15 @@ h1 {
 }
 
 .input-container input[type = "text"]{
-    width: 500px;
+    width: 500px; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
+select {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #pesquisa {
