@@ -99,8 +99,8 @@ class Pedido {
 // Lista de insumos disponíveis
 let insumos = [
     { id: 1, nome: "luva", imagem: 'https://picsum.photos/200/300', estoque: 100, descricao: "Luva de látex para proteção das mãos durante procedimentos." },
-    { id: 2, nome: "seringa", imagem: 'https://picsum.photos/400/300', estoque: 150, descricao: "Seringa descartável para aplicação de medicamentos." },
-    { id: 3, nome: "bandagens", imagem: 'https://picsum.photos/300/300', estoque: 200, descricao: "Bandagens adesivas para curativos rápidos." },
+    { id: 2, nome: "seringa", imagem: 'https://picsum.photos/200/300', estoque: 150, descricao: "Seringa descartável para aplicação de medicamentos." },
+    { id: 3, nome: "bandagens", imagem: 'https://picsum.photos/200/300', estoque: 200, descricao: "Bandagens adesivas para curativos rápidos." },
     { id: 4, nome: "máscara", imagem: 'https://picsum.photos/200/300', estoque: 500, descricao: "Máscara facial para proteção contra agentes contaminantes." },
     { id: 5, nome: "agulha", imagem: 'https://picsum.photos/200/300', estoque: 300, descricao: "Agulha hipodérmica para uso em conjunto com seringas." },
     { id: 6, nome: "esparadrapo", imagem: 'https://picsum.photos/200/300', estoque: 250, descricao: "Fita adesiva para fixação de curativos e bandagens." },

@@ -102,6 +102,7 @@ select {
 
 #lista {
     list-style: none;
+    gap: 20px;
 }
 
 #lista li{
