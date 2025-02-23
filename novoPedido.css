@@ -91,3 +91,11 @@ select {
     padding: 0 50px 0 50px;
     margin-top: 50px
 }
+
+#botaopesquisar {
+    background-color: #FFD98F;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
