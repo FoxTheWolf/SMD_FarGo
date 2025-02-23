@@ -39,3 +39,11 @@ nav p {
     padding: 20px;
     margin-right: 20px;
 }
+
+h1 {
+    text-align: center;
+    padding: 70px;
+    font-size: 70px;
+    font-weight: bold;
+}
+
