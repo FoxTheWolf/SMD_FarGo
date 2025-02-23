@@ -26,22 +26,28 @@
     <h1>Novo Pedido</h1>
 
     <div class="input-container">
-        <label for="setor">Setor:</label>
-        <input type="text" id="setor" name="setor" placeholder="Setor">
+        <div>
+            <label for="setor">Setor:</label>
+            <input type="text" id="setor" name="setor" placeholder="Setor">
+        </div>
 
-        <label for="tipo">Tipo de Pedido:</label>
-        <select id="tipo" name="tipo">
-            <option value="individual">Individual</option>
-            <option value="coletivo">Coletivo</option>
-        </select>
+        <div>
+            <label for="tipo">Tipo de Pedido:</label>
+            <select id="tipo" name="tipo">
+                <option value="individual">Individual</option>
+                <option value="coletivo">Coletivo</option>
+            </select>
+        </div>
 
-        <label for="pesquisa">Item:</label>
-        <input type="text"
-        id="pesquisa" 
-        placeholder="Pesquisar">
-        <button id="botaopesquisar">Pesquisar</button>
-        <ul id="lista" style="display: none"></ul>
-        <div id="listaSelecionados"></div>
+        <div>
+            <label for="pesquisa">Item:</label>
+            <input type="text"
+            id="pesquisa" 
+            placeholder="Pesquisar">
+            <button id="botaopesquisar">Pesquisar</button>
+            <ul id="lista" style="display: none"></ul>
+            <div id="listaSelecionados"></div>
+        </div>
     </div>
     
     
@@ -58,5 +64,3 @@
     <script src="pedidos.js"></script>
 </body>
 </html>
-
-
