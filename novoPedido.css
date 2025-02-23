@@ -55,6 +55,7 @@ h1 {
 }
 
 .input-container {
+    padding-left: 50px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -65,3 +66,10 @@ h1 {
     font-weight: bold;
 }
 
+.input-container input[type = "text"]{
+    width: 500px;
+}
+
+#pesquisa {
+    width: 250px;
+}
