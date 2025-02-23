@@ -70,12 +70,14 @@ label {
 }
 
  input[type = "text"]{
+    background-color: #A4EAC6;
     width: 500px; 
     padding: 5px;
     border-radius: 5px;
 }
 
 select {
+    background-color: #A4EAC6;
     width: 200px;
     padding: 5px;
     border-radius: 5px;
