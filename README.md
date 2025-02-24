@@ -11,6 +11,8 @@ O projeto da equipe é composto pelos seguintes estudantes:
 - PEDRO LUCAS ALMEIDA NOGUEIRA MAT 553630
 
 
+
+# Mapeamento de Funcionalidades
 | ID | Requisito Funcional | Descrição | Status |
 |----|---------------------|-----------|--------|
 | RF01 | Enviar requisições de insumos | O sistema deverá repassar as solicitações de insumo gerados pelo usuário da equipe enfermagem aos usuários da farmácia | Aprovada |
