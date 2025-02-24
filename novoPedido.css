@@ -151,6 +151,13 @@ select {
     padding: 10px;
 }
 
+.deleteBtn {
+    font-weight: bold;
+    background-color: #FFD98F;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .button-container{
     display: flex;
     justify-content: center;
