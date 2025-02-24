@@ -69,6 +69,20 @@ export async function updateFeedbackEnfermagem(id, feedback) {
         `, [feedback, id])
     return result
 }
+
+export async function getPedidoDetalhado(id) {
+    const [pedidoRows] = await pool.query(`
+        SELECT p.*, GROUP_CONCAT(CONCAT(i.nome, ' (', pi.quantidade, ')') SEPARATOR ', ') as descricao
+        FROM pedidos p
+        JOIN pedidos_insumos pi ON p.id = pi.id_pedido
+        JOIN insumos i ON pi.id_insumo = i.id
+        WHERE p.id = ?
+        GROUP BY p.id
+    `, [id]);
+    return pedidoRows;
+}
+
+
 export async function login(nome, senha) {
     const [rows] = await pool.query(`
         SELECT *

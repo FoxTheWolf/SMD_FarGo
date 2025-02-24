@@ -1,8 +1,7 @@
 import express from 'express'
 import session from 'express-session'
 
-import {getInsumos,getInsumo,getPedidos,getPedido,createPedido,login,updateStatusPedido,updateFeedbackEnfermagem} from './database.js'	
-
+import {getInsumos,getInsumo,getPedidos,getPedido,createPedido,login,updateStatusPedido,updateFeedbackEnfermagem,getPedidoDetalhado} from './database.js'	
 const app = express()
 
 app.use(express.json())
@@ -38,7 +37,14 @@ app.post('/login', async (req, res) => {
 
 app.get('/menu', async (req, res) => {
     const pedidos = await getPedidos();
-    res.render("menu.ejs", { pedidos, username: req.session.user.nome });
+    const pedidosDetalhados = await Promise.all(pedidos.map(async (pedido) => {
+        const pedidoDetalhado = await getPedidoDetalhado(pedido.id);
+        return {
+            ...pedido,
+            insumos: pedidoDetalhado.insumos,
+        };
+    }));
+    res.render("menu.ejs", { pedidos: pedidosDetalhados, username: req.session.user.nome });
 });
 app.post('/darfeedback', async (req, res) => {
     const { id } = req.body;

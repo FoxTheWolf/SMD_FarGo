@@ -107,9 +107,9 @@ table input:checked {
 }
 
 .aberto {
-    background-color: #ADD8E6; /* azul claro */
+    background-color: #ffff7c; /* amarelo claro */
   }
   
   .cancelado {
-    background-color: #ffff7c; /* vermelho claro */
+    background-color: #FFC0CB; /* vermelho claro */
 }

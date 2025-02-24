@@ -11,13 +11,13 @@
     <header>
         <nav>
             <div>
-                <img src="imagens/logo.png" alt="Logo da FarGo" width="200" height="150">
+                <a href="/"><img src="imagens/logo.png" alt="Logo da FarGo" width="200" height="150"></a>
                 <p>Histórico de pedidos</p>
             </div>
             
             <div>
                 <i class="fa-regular fa-user"></i>
-                <p>Farmacêutico: XXXXXXXX</p>
+                <p>Farmacêutico: <%=username %></p>
             </div>
         </nav>
     </header>
@@ -68,15 +68,17 @@
         </div>
     </main>
     <script>
-        function filtrarPedidos(tipo) {
+        function filtrarPedidos(tipo = 'todos') {
             const pesquisa = document.getElementById('pesquisa').value.trim();
             const rows = document.querySelectorAll('table tr[data-status]');
             rows.forEach(row => {
-                    if (!pesquisa || row.dataset.id.toString().includes(pesquisa)) {
-                        row.style.display = '';
-                    } else {
-                        row.style.display = 'none';
-                    }
+                const matchesPesquisa = !pesquisa || row.dataset.id.toString().includes(pesquisa);
+                const matchesTipo = tipo === 'todos' || row.dataset.status === tipo;
+                if (matchesPesquisa && matchesTipo) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
             });
         }
     </script>
