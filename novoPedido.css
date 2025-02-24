@@ -102,7 +102,7 @@ select {
 
 #lista {
     list-style: none;
-    gap: 20px;
+    gap: 30px;
 }
 
 #lista li{
@@ -117,6 +117,12 @@ select {
 
 .item img {
     min-width: 200px;
+}
+
+.item p {
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .item input {
