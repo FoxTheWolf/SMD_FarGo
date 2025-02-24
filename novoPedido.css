@@ -112,10 +112,18 @@ select {
 .item {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .item img {
     min-width: 200px;
+}
+
+.item button {
+    background-color: #FFD98F;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #listaSelecionados {
