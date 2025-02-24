@@ -112,11 +112,16 @@ select {
 .item {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .item img {
     min-width: 200px;
+}
+
+.item input {
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .item button {

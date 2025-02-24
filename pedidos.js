@@ -140,7 +140,7 @@ function preencherListaDeInsumos() {
             <img src="${item.imagem}">
             <p>estoque: ${item.estoque}</p>
             <p>${item.descricao}</p>
-            <input type="number" class="quantidade" min="1" max="${item.estoque}" placeholder="Quantidade">
+            <input type="number" class="quantidade" min="1" max="${item.estoque}" placeholder="Insira quantidade">
             <button class="addBtn">Adicionar ao Pedido</button>
         </div>`;
     }).join('');
