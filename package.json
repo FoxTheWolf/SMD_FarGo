@@ -1,0 +1,23 @@
+{
+  "name": "smd_fargo",
+  "version": "1.0.0",
+  "description": "O projeto da equipe é composto pelos seguintes estudantes:",
+  "main": "database.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoxTheWolf/SMD_FarGo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FoxTheWolf/SMD_FarGo/issues"
+  },
+  "homepage": "https://github.com/FoxTheWolf/SMD_FarGo#readme",
+  "dependencies": {
+    "mysql2": "^3.12.0"
+  }
+}
