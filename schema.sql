@@ -45,7 +45,11 @@ CREATE TABLE pedidos (
     id INT PRIMARY KEY AUTO_INCREMENT,
     horario DATETIME DEFAULT CURRENT_TIMESTAMP,
     setor VARCHAR(255),
-    tipo_pedido VARCHAR(255)
+    tipo_pedido VARCHAR(255),
+    status VARCHAR(255),
+    observacoes VARCHAR(255),
+    feedback_enfermagem VARCHAR(255),
+    descricao VARCHAR(255)
 );
 
 CREATE TABLE pedidos_insumos (
@@ -66,4 +70,4 @@ CREATE TABLE login (
 # tabela de usuários do sistema de pedidos, 1 e enfermeiro, 2 e farmacia
 
 INSERT INTO login (nome, senha, privilegio) VALUES
-    ('admin', 'admin', 2);
+    ('admin', 'admin',1);
